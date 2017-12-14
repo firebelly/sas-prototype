@@ -59,6 +59,10 @@ var Main = (function($) {
   }
 
   function _initNav() {
+    $(document).on('click','.open-nav', function (e) {
+      e.preventDefault();
+      _openNav();
+    });
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
 

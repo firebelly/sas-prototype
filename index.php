@@ -60,7 +60,7 @@
       </nav>
       <nav class="tiny-nav">
         <ul class="nav-list semantic-only-list"">
-          <li class="nav-list-item menu"><a href="#" class="nav-link">
+          <li class="nav-list-item menu"><a href="#" class="nav-link open-nav">
             <div class="sr-only">Menu</div>
             <svg class="icon icon-menu" aria-hidden="true" role="image"><use xlink:href="#icon-menu"/></svg>
           </a></li>

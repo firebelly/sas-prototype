@@ -725,12 +725,12 @@ ul.semantic-only-list {
 }
 .site-header.-nav-open .secondary-nav {
   z-index: 1;
-  transition: width 0.2s 0.2s, opacity 0s 0.2s;
+  transition: width 0.3s 0.3s, opacity 0.1s 0.1s;
   width: 100%;
   opacity: 1;
 }
 .site-header.-nav-open .secondary-nav .nav-list-item {
-  transition: opacity 0.2s 0.3s;
+  transition: opacity 0.2s 0.6s;
   opacity: 1;
 }
 .site-header.-nav-open .tiny-nav {
@@ -747,18 +747,18 @@ ul.semantic-only-list {
 .site-header.-nav-closed .primary-nav {
   z-index: 0;
   width: 72px;
-  transition: width 0.2s 0.2s, opacity 0s 0.4s;
+  transition: width 0.2s 0.3s, opacity 0s 0.5s;
   opacity: 0;
   pointer-events: none;
 }
 .site-header.-nav-closed .primary-nav .nav-list-item {
-  transition: opacity 0.2s 0s;
+  transition: opacity 0.3s 0s;
   opacity: 0;
 }
 .site-header.-nav-closed .secondary-nav {
   z-index: 0;
   width: 72px;
-  transition: width 0.2s 0.2s, opacity 0s 0.4s;
+  transition: width 0.15s 0.2s, opacity 0.4s 0.4s;
   opacity: 0;
   pointer-events: none;
 }
@@ -769,11 +769,11 @@ ul.semantic-only-list {
 .site-header.-nav-closed .tiny-nav {
   z-index: 1;
   opacity: 1;
-  transition: height 0.2s 0.4s, opacity 0s 0.4s;
+  transition: height 0.2s 0.5s, opacity 0s 0.5s;
   height: 216px;
 }
 .site-header.-nav-closed .tiny-nav .nav-list-item {
-  transition: opacity 0.2s 0.4s;
+  transition: opacity 0.2s 0.6s;
   opacity: 1;
 }
 .site-header .icon {
