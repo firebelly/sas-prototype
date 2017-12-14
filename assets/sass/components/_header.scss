@@ -24,13 +24,21 @@
   }
 
   .primary-nav {
+    right: 0;
+    top: 32px;
+    width: 100%;
+    height: 72px;
+    overflow: hidden;
     @include clearfix;
+    position: absolute;
     background: $white;
     @include font-primary-nav;
 
     .nav-list.dropdowns {
-      float: left;
+      top: 0;
+      left: 0;
       margin-left: 20px;
+      position: absolute;
 
       .nav-list-item {
         padding: 10px 0;
@@ -73,8 +81,10 @@
     }
 
     .nav-list.buttons {
-      float: right;
+      top: 0;
+      right: 0;
       margin-right: 40px;
+      position: absolute;
 
       a {
         line-height: 0;
@@ -83,36 +93,44 @@
 
       .nav-list-item {
         padding: 10px 0;
-      }
 
-      .sas-lockup {
-        a {
-          padding: 10px 34px 10px;
+        &.sas-lockup {
+          a {
+            padding: 10px 34px 10px;
+          }
         }
-      }
 
-      .language {
-        a {
-          padding: 15px 20px 15px;
+        &.language {
+          a {
+            padding: 15px 19px 15px;
+          }
         }
-      }
-      .search {
-        a {
-          padding: 15px 25px 15px;
+        &.search {
+          a {
+            padding: 15px 24px 15px;
+          }
         }
       }
     }
   }
 
-  .secondary-nav {
-    @include font-secondary-nav;
-    background: $charcoal;
+  .secondary-nav {    
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 32px;
     color: $white;
-    @include clearfix;
     @include smooth;
+    overflow: hidden;
+    @include clearfix;
+    position: absolute;
+    background: $charcoal;
+    @include font-secondary-nav;
 
     .nav-list {
-      float: right;
+      top: 0;
+      right: 0;
+      position: absolute;
       margin-right: 54px;
 
       .nav-list-item {
@@ -123,6 +141,145 @@
         padding: 4px 20px 4px;
       }
     }
+  }
+
+  .tiny-nav {
+    right: 0;
+    top: 32px;
+    width: 72px;
+    height: 216px; //(72*3)
+    color: $white;
+    overflow: hidden;
+    position: absolute;
+    background: $white;
+
+    .nav-list {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .nav-list-item {
+      float: none;
+      padding: 0 10px;
+
+      &:first-of-type a {
+        border-top: none;
+      }
+
+      a {
+        border-top: 2px solid $light-gray;
+      }
+
+      &.menu {
+        a {
+          padding: 25px 14px 25px;
+        }
+      }
+      &.language {
+        a {
+          padding: 22px 10px 22px;
+        }
+      }
+      &.search {
+        a {
+          padding: 22px 15px 22px;
+        }
+      }
+    }
+  }
+
+
+  .secondary-nav, .primary-nav {
+    transform-origin: right;
+  }
+  .tiny-nav {
+    transform-origin: top;
+  }
+
+  .secondary-nav {
+    // display: none;
+  }
+
+
+  &.-nav-open {
+    .primary-nav {
+      z-index: 1;
+      transition: width 0.2s 0.2s, opacity 0s 0.2s;
+      width: 100%;
+      opacity: 1;
+      .dropdowns {
+        .nav-list-item {
+          transition: opacity 0.3s 0.2s;
+          opacity: 1;
+        }
+      }
+      .buttons {
+        .nav-list-item {
+          transition: opacity 0.3s 0.3s;
+          opacity: 1;
+        }
+      }
+    }  
+
+    .secondary-nav {
+      z-index: 1;
+      transition: width 0.2s 0.2s, opacity 0s 0.2s;
+      width: 100%;
+      opacity: 1;
+      .nav-list-item {
+        transition: opacity 0.2s 0.3s;
+        opacity: 1;
+      }
+    }  
+
+    .tiny-nav {
+      z-index: 0;
+      opacity: 0;
+      height: 72px;
+      pointer-events: none;
+      transition: height 0.2s 0s, opacity 0s 0.2s;
+      .nav-list-item {
+        transition: opacity 0.2s 0s;
+        opacity: 0;
+      }
+    } 
+  }
+
+  &.-nav-closed {
+    .primary-nav {
+      z-index: 0;
+      width: 72px;
+      transition: width 0.2s 0.2s, opacity 0s 0.4s;
+      opacity: 0;
+      pointer-events: none;
+      .nav-list-item {
+        transition: opacity 0.2s 0s;
+        opacity: 0;
+      }
+    }  
+
+    .secondary-nav {
+      z-index: 0;
+      width: 72px;
+      transition: width 0.2s 0.2s, opacity 0s 0.4s;
+      opacity: 0;
+      pointer-events: none;
+      .nav-list-item {
+        transition: opacity 0.2s 0s;
+        opacity: 0;
+      }
+    }
+
+    .tiny-nav {
+      z-index: 1;
+      opacity: 1;
+      transition: height 0.2s 0.4s, opacity 0s 0.4s;
+      height: 216px;
+      .nav-list-item {
+        transition: opacity 0.2s 0.4s;
+        opacity: 1;
+      }
+    } 
   }
  
 
@@ -138,6 +295,11 @@
   .icon-search {
     width: 22px;
     height: 22px;
+  }
+
+  .icon-menu {
+    width: 24px;
+    height: 18px;
   }
 
   .icon-sas-lockup {

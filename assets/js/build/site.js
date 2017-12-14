@@ -867,7 +867,7 @@ var Main = (function($) {
     _resize();
 
     // Init functions
-    _testInit();
+    _initNav();
 
     // Esc handlers
     $(document).keyup(function(e) {
@@ -905,8 +905,34 @@ var Main = (function($) {
     }, "easeOutSine");
   }
 
-  function _testInit() {
-    console.log('Testing testing...is this thing on?');
+  function _initNav() {
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+
+      if(scrollTop > 30 ) {
+        _closeNav();
+      } else {
+        _openNav();
+      }
+    });
+  }
+  function _openNav() {
+    var $header = $('.site-header');
+    if($header.hasClass('-nav-closed')) {
+      console.log('opening');
+      $header
+        .removeClass('-nav-closed')
+        .addClass('-nav-open');
+    }
+  }
+  function _closeNav() {
+      console.log('closed');
+    var $header = $('.site-header');
+    if($header.hasClass('-nav-open')) {
+      $header
+        .removeClass('-nav-open')
+        .addClass('-nav-closed');
+    }
   }
 
   // Track ajax pages in Analytics

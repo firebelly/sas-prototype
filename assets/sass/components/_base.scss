@@ -14,6 +14,18 @@ body {
   color: $charcoal;
   height: 300vh;
   min-width: 1200px;
+  position: relative;
+  &::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    background-image: url('../images/checker.png');
+    z-index: -1;
+    opacity: 0.1;
+  }
 }
 
 p {

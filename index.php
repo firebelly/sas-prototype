@@ -27,7 +27,7 @@
   </head>
   <body>
     <div class="svg-defs"><?php include_once("assets/svgs/build/svgs-defs.svg"); ?></div>
-    <header class="site-header" role="banner">
+    <header class="site-header -nav-open" role="banner">
       <nav class="secondary-nav" role="navigation"> 
         <ul class="nav-list semantic-only-list"">
           <li class="nav-list-item"><a href="#" class="nav-link">News + Events</a></li>
@@ -55,6 +55,22 @@
           <li class="nav-list-item sas-lockup"><a href="#" class="nav-link">
             <div class="sr-only">Shanghai American School</div>
             <svg class="icon icon-sas-lockup" aria-hidden="true" role="image"><use xlink:href="#icon-sas-lockup"/></svg>
+          </a></li>
+        </ul>
+      </nav>
+      <nav class="tiny-nav">
+        <ul class="nav-list semantic-only-list"">
+          <li class="nav-list-item menu"><a href="#" class="nav-link">
+            <div class="sr-only">Menu</div>
+            <svg class="icon icon-menu" aria-hidden="true" role="image"><use xlink:href="#icon-menu"/></svg>
+          </a></li>
+          <li class="nav-list-item search"><a href="#" class="nav-link">
+            <div class="sr-only">Search</div>
+            <svg class="icon icon-search" aria-hidden="true" role="image"><use xlink:href="#icon-search"/></svg>
+          </a></li>
+          <li class="nav-list-item language"><a href="#" class="nav-link">
+            <div class="sr-only">Language</div>
+            <svg class="icon icon-american-flag" aria-hidden="true" role="image"><use xlink:href="#icon-american-flag"/></svg>
           </a></li>
         </ul>
       </nav>
