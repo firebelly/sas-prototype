@@ -10,6 +10,10 @@ html {
 body {
 	font-size: 16px; //Em base unit
 	font-size: 100%;
+  background: linear-gradient(to left top, blue, green, red);
+  color: $charcoal;
+  height: 300vh;
+  min-width: 1200px;
 }
 
 p {
@@ -36,4 +40,28 @@ img {
   @include min-screen($bpMd) {
     // set breakpoints on a per-module basis when possible
   }
+}
+
+ul.semantic-only-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.svg-defs {
+  display: none;
+}
+
+// Visually hide, accessibility-friendly
+@mixin sr-only {
+  border: 0;
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0,0,0,0);
+}
+.sr-only {
+  @include sr-only;
 }

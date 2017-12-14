@@ -1,5 +1,148 @@
 // Header
 
 .site-header {
-  
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  min-width: 1200px;
+
+
+  .nav-list {
+    margin: 0;
+    @include clearfix;
+
+    .nav-list-item {
+      float: left;
+
+      a {
+        display: block;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .primary-nav {
+    @include clearfix;
+    background: $white;
+    @include font-primary-nav;
+
+    .nav-list.dropdowns {
+      float: left;
+      margin-left: 20px;
+
+      .nav-list-item {
+        padding: 10px 0;
+
+        &:first-of-type a {
+          border-left: none;
+        }
+      }
+
+      a {
+        position: relative;
+        padding: 11px 20px 11px;
+        border-left: 2px solid $light-gray;
+
+        &:hover {
+          color: $blue;
+
+          &::before {
+            left: -2px;
+            right: -2px;
+            top: -20px;
+            content: '';
+            height: 10px;
+            background: $white;
+            position: absolute;
+            border-bottom: 1px solid $light-gray;
+          }
+
+          &::after {
+            top: 100%;
+            content: '';
+            left: -2px;
+            right: -2px;
+            height: 10px;
+            background: $blue;
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .nav-list.buttons {
+      float: right;
+      margin-right: 40px;
+
+      a {
+        line-height: 0;
+        border-left: 2px solid $light-gray;
+      }
+
+      .nav-list-item {
+        padding: 10px 0;
+      }
+
+      .sas-lockup {
+        a {
+          padding: 10px 34px 10px;
+        }
+      }
+
+      .language {
+        a {
+          padding: 15px 20px 15px;
+        }
+      }
+      .search {
+        a {
+          padding: 15px 25px 15px;
+        }
+      }
+    }
+  }
+
+  .secondary-nav {
+    @include font-secondary-nav;
+    background: $charcoal;
+    color: $white;
+    @include clearfix;
+    @include smooth;
+
+    .nav-list {
+      float: right;
+      margin-right: 54px;
+
+      .nav-list-item {
+        margin-left: 10px;
+      }
+
+      a {
+        padding: 4px 20px 4px;
+      }
+    }
+  }
+ 
+
+  .icon {
+    fill: $charcoal;
+  }
+
+  .icon-american-flag {
+    width: 30px;
+    height: 22px;
+  }
+
+  .icon-search {
+    width: 22px;
+    height: 22px;
+  }
+
+  .icon-sas-lockup {
+    width: 253px;
+    height: 32px;
+  }
+
 }

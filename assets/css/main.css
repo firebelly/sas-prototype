@@ -377,10 +377,23 @@ table {
   font-family: Georgia, serif;
 }
 
+@font-face {
+  font-family: "Circular-Black";
+  src: url("../fonts/lineto-circular-black.eot");
+  src: url("../fonts/lineto-circular-black.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular-Book";
+  src: url("../fonts/lineto-circular-book.eot");
+  src: url("../fonts/lineto-circular-book.eot?#iefix") format("embedded-opentype"), url("../fonts/lineto-circular-book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 .grid {
   width: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
@@ -392,39 +405,33 @@ table {
 @media screen and (min-width: 43.75em) {
   .flex-item {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-basis: auto;
-        -ms-flex-preferred-size: auto;
-            flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
   }
 
   .one-fourth {
     max-width: 25%;
-    -webkit-flex-basis: 25%;
-        -ms-flex-preferred-size: 25%;
-            flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
 
   .one-third {
-    -webkit-flex-basis: 33.3333333%;
-        -ms-flex-preferred-size: 33.3333333%;
-            flex-basis: 33.3333333%;
+    -ms-flex-preferred-size: 33.3333333%;
+        flex-basis: 33.3333333%;
     max-width: 33.3333333%;
   }
 
   .one-half {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     max-width: 50%;
   }
 
   .two-thirds {
-    -webkit-flex-basis: 66.6666667%;
-        -ms-flex-preferred-size: 66.6666667%;
-            flex-basis: 66.6666667%;
+    -ms-flex-preferred-size: 66.6666667%;
+        flex-basis: 66.6666667%;
     max-width: 66.6666667%;
   }
 }
@@ -439,6 +446,10 @@ html {
 body {
   font-size: 16px;
   font-size: 100%;
+  background: linear-gradient(to left top, blue, green, red);
+  color: #2e2e2e;
+  height: 300vh;
+  min-width: 1200px;
 }
 
 p {
@@ -471,4 +482,174 @@ img {
 }
 .wrap:after {
   clear: both;
+}
+
+ul.semantic-only-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.svg-defs {
+  display: none;
+}
+
+.sr-only {
+  border: 0;
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.site-header {
+  top: 0;
+  left: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  min-width: 1200px;
+}
+.site-header .nav-list {
+  margin: 0;
+  *zoom: 1;
+}
+.site-header .nav-list:before, .site-header .nav-list:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.site-header .nav-list:after {
+  clear: both;
+}
+.site-header .nav-list .nav-list-item {
+  float: left;
+}
+.site-header .nav-list .nav-list-item a {
+  display: block;
+  text-decoration: none;
+}
+.site-header .primary-nav {
+  *zoom: 1;
+  background: #fff;
+  font-family: "Circular-Black";
+  font-size: 16px;
+  letter-spacing: .02em;
+  line-height: 1.875;
+  text-transform: uppercase;
+}
+.site-header .primary-nav:before, .site-header .primary-nav:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.site-header .primary-nav:after {
+  clear: both;
+}
+.site-header .primary-nav .nav-list.dropdowns {
+  float: left;
+  margin-left: 20px;
+}
+.site-header .primary-nav .nav-list.dropdowns .nav-list-item {
+  padding: 10px 0;
+}
+.site-header .primary-nav .nav-list.dropdowns .nav-list-item:first-of-type a {
+  border-left: none;
+}
+.site-header .primary-nav .nav-list.dropdowns a {
+  position: relative;
+  padding: 11px 20px 11px;
+  border-left: 2px solid #eaeaea;
+}
+.site-header .primary-nav .nav-list.dropdowns a:hover {
+  color: #3769b9;
+}
+.site-header .primary-nav .nav-list.dropdowns a:hover::before {
+  left: -2px;
+  right: -2px;
+  top: -20px;
+  content: '';
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  border-bottom: 1px solid #eaeaea;
+}
+.site-header .primary-nav .nav-list.dropdowns a:hover::after {
+  top: 100%;
+  content: '';
+  left: -2px;
+  right: -2px;
+  height: 10px;
+  background: #3769b9;
+  position: absolute;
+}
+.site-header .primary-nav .nav-list.buttons {
+  float: right;
+  margin-right: 40px;
+}
+.site-header .primary-nav .nav-list.buttons a {
+  line-height: 0;
+  border-left: 2px solid #eaeaea;
+}
+.site-header .primary-nav .nav-list.buttons .nav-list-item {
+  padding: 10px 0;
+}
+.site-header .primary-nav .nav-list.buttons .sas-lockup a {
+  padding: 10px 34px 10px;
+}
+.site-header .primary-nav .nav-list.buttons .language a {
+  padding: 15px 20px 15px;
+}
+.site-header .primary-nav .nav-list.buttons .search a {
+  padding: 15px 25px 15px;
+}
+.site-header .secondary-nav {
+  font-family: "Circular-Book";
+  font-size: 16px;
+  letter-spacing: .001em;
+  line-height: 1.5;
+  text-transform: none;
+  background: #2e2e2e;
+  color: #fff;
+  *zoom: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.site-header .secondary-nav:before, .site-header .secondary-nav:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.site-header .secondary-nav:after {
+  clear: both;
+}
+.site-header .secondary-nav .nav-list {
+  float: right;
+  margin-right: 54px;
+}
+.site-header .secondary-nav .nav-list .nav-list-item {
+  margin-left: 10px;
+}
+.site-header .secondary-nav .nav-list a {
+  padding: 4px 20px 4px;
+}
+.site-header .icon {
+  fill: #2e2e2e;
+}
+.site-header .icon-american-flag {
+  width: 30px;
+  height: 22px;
+}
+.site-header .icon-search {
+  width: 22px;
+  height: 22px;
+}
+.site-header .icon-sas-lockup {
+  width: 253px;
+  height: 32px;
 }
