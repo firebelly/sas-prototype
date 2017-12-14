@@ -139,6 +139,9 @@
 
       a {
         padding: 4px 20px 4px;
+        &:hover {
+          background: $charcoal-dark;
+        }
       }
     }
   }

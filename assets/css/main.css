@@ -555,7 +555,7 @@ ul.semantic-only-list {
   background: #fff;
   font-family: "Circular-Black";
   font-size: 16px;
-  letter-spacing: .02em;
+  letter-spacing: .2em;
   line-height: 1.875;
   text-transform: uppercase;
 }
@@ -643,7 +643,7 @@ ul.semantic-only-list {
   background: #2e2e2e;
   font-family: "Circular-Book";
   font-size: 16px;
-  letter-spacing: .001em;
+  letter-spacing: .01em;
   line-height: 1.5;
   text-transform: none;
 }
@@ -667,6 +667,9 @@ ul.semantic-only-list {
 }
 .site-header .secondary-nav .nav-list a {
   padding: 4px 20px 4px;
+}
+.site-header .secondary-nav .nav-list a:hover {
+  background: #1e1e1e;
 }
 .site-header .tiny-nav {
   right: 0;

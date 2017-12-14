@@ -38,7 +38,7 @@ $big: 3em;
 @mixin font-primary-nav {
   font-family: "Circular-Black";
   font-size: 16px;
-  letter-spacing: .02em;
+  letter-spacing: .2em;
   line-height: (30/16);
   text-transform: uppercase;
 }
@@ -46,7 +46,7 @@ $big: 3em;
 @mixin font-secondary-nav {
   font-family: "Circular-Book";
   font-size: 16px;
-  letter-spacing: .001em;
+  letter-spacing: .01em;
   line-height: (24/16);
   text-transform: none;
 }
