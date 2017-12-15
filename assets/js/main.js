@@ -85,7 +85,7 @@ var Main = (function($) {
 
       setTimeout(function () {
         $header.find('.nav-list-item.has-dropdown').removeClass('-temporarily-disable-dropdowns');
-      }, 300)
+      }, 500)
     }
   }
   function _closeNav() {

@@ -797,6 +797,9 @@ ul.semantic-only-list {
 .site-header .nav-list-item.has-dropdown {
   position: relative;
 }
+.site-header .nav-list-item.has-dropdown:not(.-temporarily-disable-dropdowns):hover {
+  color: #3769b9;
+}
 .site-header .nav-list-item.has-dropdown:not(.-temporarily-disable-dropdowns):hover .dropdown {
   opacity: 1;
   z-index: 1;
@@ -880,6 +883,8 @@ ul.semantic-only-list {
 }
 .site-header .nav-list-item.has-dropdown .dropdown {
   width: 350px;
+  overflow: hidden;
+  color: #2e2e2e;
   background: #ffffff;
   position: absolute;
   pointer-events: none;
@@ -889,7 +894,6 @@ ul.semantic-only-list {
   letter-spacing: .2em;
   line-height: 2.18182;
   text-transform: uppercase;
-  overflow: hidden;
 }
 .site-header .nav-list-item.has-dropdown .dropdown .dropdown-list {
   position: absolute;

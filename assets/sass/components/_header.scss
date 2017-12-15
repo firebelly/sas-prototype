@@ -8,7 +8,6 @@
   position: fixed;
   min-width: 1200px;
 
-
   .nav-list {
     margin: 0;
     @include clearfix;
@@ -28,7 +27,6 @@
     top: 32px;
     width: 100%;
     height: 72px;
-    // overflow: hidden;
     @include clearfix;
     position: absolute;
     background: $white;
@@ -336,6 +334,8 @@
     position: relative;
 
     &:not(.-temporarily-disable-dropdowns):hover{
+      color: $blue;
+      
       .dropdown {
         opacity: 1;
         z-index: 1;
@@ -371,12 +371,13 @@
 
     .dropdown {
       width: 350px;
+      overflow: hidden;
+      color: $charcoal;
       background: $white;
       position: absolute;
       pointer-events: none;
       top: calc(100% - 11px);
       @include font-dropdown;
-      overflow: hidden;
 
       .dropdown-list {
         position: absolute;
