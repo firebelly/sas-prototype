@@ -10,9 +10,9 @@ html {
 body {
 	font-size: 16px; //Em base unit
 	font-size: 100%;
-  background: linear-gradient(to left top, blue, green, red);
+  background: linear-gradient(to left top, $red, $blue);
   color: $charcoal;
-  height: 300vh;
+  height: 200vh;
   min-width: 1200px;
   position: relative;
   &::after {

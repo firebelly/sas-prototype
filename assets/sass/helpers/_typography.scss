@@ -51,6 +51,14 @@ $big: 3em;
   text-transform: none;
 }
 
+@mixin font-dropdown {
+  font-family: "Circular-Black";
+  font-size: 11px;
+  letter-spacing: .2em;
+  line-height: (24/11);
+  text-transform: uppercase;
+}
+
 @mixin smooth {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

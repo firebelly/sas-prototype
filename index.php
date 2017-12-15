@@ -38,10 +38,55 @@
       </nav>
       <nav class="primary-nav" role="navigation"> 
         <ul class="nav-list dropdowns semantic-only-list">
-          <li class="nav-list-item"><a href="#" class="nav-link">Our Story</a></li>
-          <li class="nav-list-item"><a href="#" class="nav-link">Academics</a></li>
-          <li class="nav-list-item"><a href="#" class="nav-link">Life at SAS</a></li>
-          <li class="nav-list-item"><a href="#" class="nav-link">Admissions</a></li>
+          <li class="nav-list-item has-dropdown dropdown-closed">
+            <a href="#" class="nav-link">Our Story</a>
+            <div class="dropdown has-5-items">
+              <ul class="dropdown-list semantic-only-list">
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Lorem</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Ipsum</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Dolor Sit</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Tincidut</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Donec</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-list-item has-dropdown dropdown-closed">
+            <a href="#" class="nav-link">Academics</a>
+            <div class="dropdown has-5-items">
+              <ul class="dropdown-list semantic-only-list">
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Lorem</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Ipsum</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Dolor Sit</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Amet Cras</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Tincidut</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-list-item has-dropdown dropdown-open">
+            <a href="#" class="nav-link">Life at SAS</a>
+            <div class="dropdown has-7-items">
+              <ul class="dropdown-list semantic-only-list">
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Overview</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Meet A Family</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Plan A Visit</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Qualifications</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Tuition + Fees</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">FAQs</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Apply</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-list-item has-dropdown dropdown-closed">
+            <a href="#" class="nav-link">Admissions</a>
+            <div class="dropdown has-4-items">
+              <ul class="dropdown-list semantic-only-list">
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Lorem</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Ipsum</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Dolor Sit</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Amet Cras</a></li>
+              </ul>
+            </div>
+          </li>
         </ul>
         <ul class="nav-list buttons semantic-only-list"">
           <li class="nav-list-item search"><a href="#" class="nav-link">
