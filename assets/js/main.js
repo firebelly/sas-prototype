@@ -79,7 +79,13 @@ var Main = (function($) {
       console.log('opening');
       $header
         .removeClass('-nav-closed')
-        .addClass('-nav-open');
+        .addClass('-nav-open')
+        .find('.nav-list-item.has-dropdown')
+        .addClass('-temporarily-prevent-dropdowns');
+
+      setTimeout(function () {
+        $header.find('.nav-list-item.has-dropdown').removeClass('-temporarily-prevent-dropdowns');
+      }, 300)
     }
   }
   function _closeNav() {
