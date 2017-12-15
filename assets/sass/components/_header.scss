@@ -44,7 +44,9 @@
         padding: 12px 0;
 
         &:first-of-type .nav-link {
-          border-left: none;
+          &::after {
+            display: none;
+          }
         }
       }
 
@@ -86,27 +88,57 @@
       position: absolute;
 
       .nav-link {
+        z-index: 0;
         line-height: 0;
-        border-left: 2px solid $light-gray;
+        overflow: visible;
+        position: relative;
+        transition: background-color 0.2s;
+
+        &::after {
+          left: 0;
+          top: 12px;
+          width: 2px;
+          content: '';
+          bottom: 12px;
+          position: absolute;
+          background-color: $light-gray;
+        }
+
+        &::before {
+          left: 0;
+          top: 0;
+          bottom: 0;
+          opacity: 0;
+          z-index: -1;
+          content: '';
+          right: -2px;
+          position: absolute;
+          transition: opacity 0.2s;
+          background-color: $light-gray;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
       }
 
       .nav-list-item {
-        padding: 10px 0;
-
         &.sas-lockup {
           .nav-link {
-            padding: 10px 34px 10px;
+            padding: 20px 34px
           }
         }
 
         &.language {
           .nav-link {
-            padding: 15px 19px 15px;
+            padding: 25px 19px;
           }
         }
         &.search {
           .nav-link {
-            padding: 15px 24px 15px;
+            padding: 25px 24px;
           }
         }
       }
@@ -130,14 +162,13 @@
       top: 0;
       right: 0;
       position: absolute;
-      margin-right: 54px;
-
-      .nav-list-item {
-        margin-left: 10px;
-      }
+      margin-right: 49px;
 
       .nav-link {
-        padding: 4px 20px 4px;
+        padding: 4px 25px;
+        background: $charcoal;
+        transition: background-color 0.2s;
+
         &:hover {
           background: $charcoal-dark;
         }
@@ -162,29 +193,59 @@
 
     .nav-list-item {
       float: none;
-      padding: 0 12px;
 
       &:first-of-type .nav-link {
-        border-top: none;
+        &::after {
+          display: none;
+        }
       }
 
       .nav-link {
-        border-top: 2px solid $light-gray;
+        position: relative;
+
+        &::after {
+          top: 0;
+          left: 12px;
+          height: 2px;
+          content: '';
+          right: 12px;
+          position: absolute;
+          background-color: $light-gray;
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+          right: 0;
+          opacity: 0;
+          z-index: -1;
+          content: '';
+          bottom: -2px;
+          position: absolute;
+          transition: opacity 0.2s;
+          background-color: $light-gray;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
       }
 
       &.menu {
         .nav-link {
-          padding: 25px 12px;
+          padding: 25px 24px;
         }
       }
       &.language {
         .nav-link {
-          padding: 22px 8px;
+          padding: 23px 20px;
         }
       }
       &.search {
         .nav-link {
-          padding: 22px 13px;
+          padding: 23px 25px;
         }
       }
     }
@@ -193,31 +254,31 @@
   &.-nav-open {
     .primary-nav {
       z-index: 1;
-      transition: width 0.2s 0.2s, opacity 0s 0.2s;
-      width: 100%;
       opacity: 1;
+      width: 100%;
+      transition: width 0.2s 0.2s, opacity 0s 0.2s;
       .dropdowns {
         .nav-list-item {
-          transition: opacity 0.3s 0.2s;
           opacity: 1;
+          transition: opacity 0.3s 0.2s;
         }
       }
       .buttons {
         .nav-list-item {
-          transition: opacity 0.3s 0.3s;
           opacity: 1;
+          transition: opacity 0.3s 0.3s;
         }
       }
     }  
 
     .secondary-nav {
       z-index: 1;
-      transition: width 0.3s 0.3s, opacity 0.1s 0.1s;
-      width: 100%;
       opacity: 1;
+      width: 100%;
+      transition: width 0.3s 0.3s, opacity 0.1s 0.1s;
       .nav-list-item {
-        transition: opacity 0.2s 0.6s;
         opacity: 1;
+        transition: opacity 0.2s 0.6s;
       }
     }  
 
@@ -228,45 +289,45 @@
       pointer-events: none;
       transition: height 0.2s 0s, opacity 0s 0.2s;
       .nav-list-item {
-        transition: opacity 0.2s 0s;
         opacity: 0;
+        transition: opacity 0.2s 0s;
       }
     } 
   }
 
   &.-nav-closed {
     .primary-nav {
+      opacity: 0;
       z-index: 0;
       width: 72px;
       transition: width 0.2s 0.3s, opacity 0s 0.5s;
-      opacity: 0;
       pointer-events: none;
       .nav-list-item {
-        transition: opacity 0.3s 0s;
         opacity: 0;
+        transition: opacity 0.3s 0s;
       }
     }  
 
     .secondary-nav {
+      opacity: 0;
       z-index: 0;
       width: 72px;
-      transition: width 0.15s 0.2s, opacity 0.4s 0.4s;
-      opacity: 0;
       pointer-events: none;
+      transition: width 0.15s 0.2s, opacity 0.4s 0.4s;
       .nav-list-item {
-        transition: opacity 0.2s 0s;
         opacity: 0;
+        transition: opacity 0.2s 0s;
       }
     }
 
     .tiny-nav {
       z-index: 1;
       opacity: 1;
-      transition: height 0.2s 0.5s, opacity 0s 0.5s;
       height: 216px;
+      transition: height 0.2s 0.5s, opacity 0s 0.5s;
       .nav-list-item {
-        transition: opacity 0.2s 0.6s;
         opacity: 1;
+        transition: opacity 0.2s 0.6s;
       }
     } 
   }
@@ -274,7 +335,7 @@
   .nav-list-item.has-dropdown {
     position: relative;
 
-    &:not(.-temporarily-prevent-dropdowns):hover{
+    &:not(.-temporarily-disable-dropdowns):hover{
       .dropdown {
         opacity: 1;
         z-index: 1;
@@ -327,13 +388,28 @@
       .dropdown-link {
         display: block;
         padding: 11px 0;
+        position: relative;
         text-decoration: none;
-        border-bottom: 2px solid $light-gray;
+
+        &:after {
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 2px;
+          content: '';
+          position: absolute;
+          background-color: $light-gray;
+        }
 
         &:hover {
           color: $blue;
-          padding-bottom: 9px;
-          border-bottom: 4px solid $blue;
+          transition: color 0.15s;
+
+          &:after {
+            height: 4px;
+            background-color: $blue;
+            transition: background-color 0.15s, height 0.15s;
+          }
         }
       }
     }
@@ -363,5 +439,4 @@
     width: 253px;
     height: 32px;
   }
-
 }

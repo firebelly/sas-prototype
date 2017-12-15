@@ -81,10 +81,10 @@ var Main = (function($) {
         .removeClass('-nav-closed')
         .addClass('-nav-open')
         .find('.nav-list-item.has-dropdown')
-        .addClass('-temporarily-prevent-dropdowns');
+        .addClass('-temporarily-disable-dropdowns');
 
       setTimeout(function () {
-        $header.find('.nav-list-item.has-dropdown').removeClass('-temporarily-prevent-dropdowns');
+        $header.find('.nav-list-item.has-dropdown').removeClass('-temporarily-disable-dropdowns');
       }, 300)
     }
   }
