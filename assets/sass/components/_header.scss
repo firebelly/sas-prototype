@@ -156,7 +156,8 @@
 
         &.-dropdown-open {
           height: 144px;
-          transition: height 0.2s 0s;
+          transition: height 0.2s 0s, opacity 0s 0s;
+          opacity: 1;
           .dropdown-link {
             opacity: 1;
             transition: opacity 0.2s 0.1s;
@@ -166,7 +167,8 @@
         &.-dropdown-closed {
           pointer-events: none;
           height: 0;
-          transition: height 0.2s 0.1s;
+          opacity: 0;
+          transition: height 0.2s 0.1s, opacity 0s 0.3s;
           .dropdown-link {
             opacity: 0;
             transition: opacity 0.2s 0s;
@@ -324,7 +326,8 @@
 
       &.-dropdown-open {
         width: 144px;
-        transition: width 0.2s 0s;
+        transition: width 0.2s 0s, opacity 0s 0s;
+        opacity: 1;
 
         .dropdown-link {
           opacity: 1;
@@ -334,8 +337,9 @@
 
       &.-dropdown-closed {
         width: 0;
+        opacity: 0;
         pointer-events: none;
-        transition: width 0.2s 0.1s;
+        transition: width 0.2s 0.1s, opacity 0s 0.3s;
 
         .dropdown-link {
           opacity: 0;
@@ -466,7 +470,7 @@
         }
       }
     }
-    
+
     &:not(:hover) {
       .dropdown {
         height: 0;

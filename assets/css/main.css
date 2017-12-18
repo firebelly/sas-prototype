@@ -642,7 +642,8 @@ ul.semantic-only-list {
 }
 .site-header .primary-nav .nav-list.buttons .language-dropdown.-dropdown-open {
   height: 144px;
-  transition: height 0.2s 0s;
+  transition: height 0.2s 0s, opacity 0s 0s;
+  opacity: 1;
 }
 .site-header .primary-nav .nav-list.buttons .language-dropdown.-dropdown-open .dropdown-link {
   opacity: 1;
@@ -651,7 +652,8 @@ ul.semantic-only-list {
 .site-header .primary-nav .nav-list.buttons .language-dropdown.-dropdown-closed {
   pointer-events: none;
   height: 0;
-  transition: height 0.2s 0.1s;
+  opacity: 0;
+  transition: height 0.2s 0.1s, opacity 0s 0.3s;
 }
 .site-header .primary-nav .nav-list.buttons .language-dropdown.-dropdown-closed .dropdown-link {
   opacity: 0;
@@ -797,7 +799,8 @@ ul.semantic-only-list {
 }
 .site-header .tiny-nav .language-dropdown.-dropdown-open {
   width: 144px;
-  transition: width 0.2s 0s;
+  transition: width 0.2s 0s, opacity 0s 0s;
+  opacity: 1;
 }
 .site-header .tiny-nav .language-dropdown.-dropdown-open .dropdown-link {
   opacity: 1;
@@ -805,8 +808,9 @@ ul.semantic-only-list {
 }
 .site-header .tiny-nav .language-dropdown.-dropdown-closed {
   width: 0;
+  opacity: 0;
   pointer-events: none;
-  transition: width 0.2s 0.1s;
+  transition: width 0.2s 0.1s, opacity 0s 0.3s;
 }
 .site-header .tiny-nav .language-dropdown.-dropdown-closed .dropdown-link {
   opacity: 0;
