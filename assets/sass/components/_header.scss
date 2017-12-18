@@ -42,28 +42,30 @@
         padding: 12px 0;
 
         &:first-of-type .nav-link {
-          &::after {
-            display: none;
-          }
+          border-left: none;
         }
       }
 
       .nav-link {
-        position: relative;
         padding: 9px 20px;
+        position: relative;
         border-left: 2px solid $light-gray;
+
+        &::before {
+          height: 0;
+          left: -2px;
+          right: -2px;
+          content: '';
+          background: $white;
+          position: absolute;
+          transition: height 0.1s;
+          bottom: calc(100% + 12px);
+        }
+
         &:hover {
-          // color: $blue;
 
           &::before {
-            left: -2px;
-            right: -2px;
-            top: -21px;
-            content: '';
-            height: 10px;
-            background: $white;
-            position: absolute;
-            border-bottom: 1px solid $light-gray;
+            height: 12px;
           }
 
           // &::after {

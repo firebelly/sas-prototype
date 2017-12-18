@@ -576,23 +576,26 @@ ul.semantic-only-list {
 .site-header .primary-nav .nav-list.dropdowns .nav-list-item {
   padding: 12px 0;
 }
-.site-header .primary-nav .nav-list.dropdowns .nav-list-item:first-of-type .nav-link::after {
-  display: none;
+.site-header .primary-nav .nav-list.dropdowns .nav-list-item:first-of-type .nav-link {
+  border-left: none;
 }
 .site-header .primary-nav .nav-list.dropdowns .nav-link {
-  position: relative;
   padding: 9px 20px;
+  position: relative;
   border-left: 2px solid #eaeaea;
 }
-.site-header .primary-nav .nav-list.dropdowns .nav-link:hover::before {
+.site-header .primary-nav .nav-list.dropdowns .nav-link::before {
+  height: 0;
   left: -2px;
   right: -2px;
-  top: -21px;
   content: '';
-  height: 10px;
   background: #ffffff;
   position: absolute;
-  border-bottom: 1px solid #eaeaea;
+  transition: height 0.1s;
+  bottom: calc(100% + 12px);
+}
+.site-header .primary-nav .nav-list.dropdowns .nav-link:hover::before {
+  height: 12px;
 }
 .site-header .primary-nav .nav-list.buttons {
   top: 0;
