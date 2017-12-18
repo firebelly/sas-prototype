@@ -868,11 +868,12 @@ var Main = (function($) {
 
     // Init functions
     _initNav();
+    _initLanguageDropdown();
 
     // Esc handlers
     $(document).keyup(function(e) {
       if (e.keyCode === 27) {
-
+        _closeLanguageDropdown();
       }
     });
 
@@ -905,6 +906,38 @@ var Main = (function($) {
     }, "easeOutSine");
   }
 
+
+  function _initLanguageDropdown() {
+    $(document).on('click','.toggle-language-dropdown', function (e) {
+      e.preventDefault();
+      _toggleLanguageDropdown();
+    });
+  }
+  function _toggleLanguageDropdown() {
+    var $dropdown = $('.language-dropdown');
+    if($dropdown.hasClass('-dropdown-closed')) {
+      _openLanguageDropdown();
+    } else {
+      _closeLanguageDropdown();
+    }
+  }
+  function _openLanguageDropdown() {
+    var $dropdown = $('.language-dropdown');
+    if($dropdown.hasClass('-dropdown-closed')) {
+      $dropdown
+        .removeClass('-dropdown-closed')
+        .addClass('-dropdown-open')
+    }
+  }
+  function _closeLanguageDropdown() {
+    var $dropdown = $('.language-dropdown');
+    if($dropdown.hasClass('-dropdown-open')) {
+      $dropdown
+        .removeClass('-dropdown-open')
+        .addClass('-dropdown-closed');
+    }
+  }
+
   function _initNav() {
     $(document).on('click','.open-nav', function (e) {
       e.preventDefault();
@@ -923,25 +956,28 @@ var Main = (function($) {
   function _openNav() {
     var $header = $('.site-header');
     if($header.hasClass('-nav-closed')) {
-      console.log('opening');
       $header
         .removeClass('-nav-closed')
-        .addClass('-nav-open')
-        .find('.nav-list-item.has-dropdown')
-        .addClass('-temporarily-disable-dropdowns');
+        .addClass('-nav-open');
+      $('.nav-list-item.has-dropdown').addClass('-temporarily-disable-dropdowns');
+        
+
+      _closeLanguageDropdown();
 
       setTimeout(function () {
         $header.find('.nav-list-item.has-dropdown').removeClass('-temporarily-disable-dropdowns');
-      }, 500)
+      }, 500);
     }
   }
   function _closeNav() {
-      console.log('closed');
     var $header = $('.site-header');
     if($header.hasClass('-nav-open')) {
       $header
         .removeClass('-nav-open')
         .addClass('-nav-closed');
+      $('.nav-list-item.has-dropdown').addClass('-temporarily-disable-dropdowns');
+
+      _closeLanguageDropdown();
     }
   }
 

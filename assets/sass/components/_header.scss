@@ -133,12 +133,43 @@
 
         &.language {
           .nav-link {
-            padding: 25px 19px;
+            padding: 25px 21px;
           }
         }
         &.search {
           .nav-link {
             padding: 25px 24px;
+          }
+        }
+      }
+
+      .language-dropdown {
+        top: 100%;
+        width: 72px;
+        position: absolute;
+
+
+        .dropdown-list {
+          position: absolute;
+          bottom: 0;
+        }
+
+        &.-dropdown-open {
+          height: 144px;
+          transition: height 0.2s 0s;
+          .dropdown-link {
+            opacity: 1;
+            transition: opacity 0.2s 0.1s;
+          }
+        }
+
+        &.-dropdown-closed {
+          pointer-events: none;
+          height: 0;
+          transition: height 0.2s 0.1s;
+          .dropdown-link {
+            opacity: 0;
+            transition: opacity 0.2s 0s;
           }
         }
       }
@@ -182,7 +213,7 @@
     width: 72px;
     height: 216px; //(72*3)
     color: $white;
-    overflow: hidden;
+    // overflow: hidden;
     position: absolute;
     background: $white;
 
@@ -197,6 +228,12 @@
       &:first-of-type .nav-link {
         &::after {
           display: none;
+        }
+      }
+
+      &:last-of-type .nav-link {
+        &::before {
+          bottom: 0px;
         }
       }
 
@@ -239,6 +276,7 @@
         }
       }
       &.language {
+        position: relative;
         .nav-link {
           padding: 23px 20px;
         }
@@ -246,6 +284,62 @@
       &.search {
         .nav-link {
           padding: 23px 25px;
+        }
+      }
+    }
+
+    .language-dropdown {
+      top: 0;
+      right: 100%;
+      height: 72px;
+      position: absolute;
+
+      .dropdown-list {
+        left: 0;
+        width: 144px;
+        position: absolute;
+        @include clearfix;
+
+        .dropdown-list-item {
+          float: left;
+        }
+      }
+
+      .dropdown-link {
+        &::after {
+          right: 0;
+          left: auto;
+          top: 12px;
+          bottom: 12px;
+          width: 2px;
+          height: auto;
+        }
+
+        &::before {
+          left: -2px;
+          bottom: 0;
+        }
+
+      }
+
+      &.-dropdown-open {
+        width: 144px;
+        transition: width 0.2s 0s;
+
+        .dropdown-link {
+          opacity: 1;
+          transition: opacity 0.2s 0.1s;
+        }
+      }
+
+      &.-dropdown-closed {
+        width: 0;
+        pointer-events: none;
+        transition: width 0.2s 0.1s;
+
+        .dropdown-link {
+          opacity: 0;
+          transition: opacity 0.2s 0s;
         }
       }
     }
@@ -287,7 +381,7 @@
       opacity: 0;
       height: 72px;
       pointer-events: none;
-      transition: height 0.2s 0s, opacity 0s 0.2s;
+      transition: height 0.2s 0.1s, opacity 0s 0.3s;
       .nav-list-item {
         opacity: 0;
         transition: opacity 0.2s 0s;
@@ -372,6 +466,7 @@
         }
       }
     }
+    
     &:not(:hover) {
       .dropdown {
         height: 0;
@@ -398,7 +493,6 @@
       @include font-dropdown;
 
       .dropdown-list {
-        position: absolute;
         bottom: 0;
         width: 350px;
         padding: 0 25px 25px;
@@ -434,12 +528,60 @@
     }
   }
  
+  .language-dropdown {
+    overflow: hidden;
+    background: $white;
+
+    .dropdown-link {
+      z-index: 0;
+      line-height: 0;
+      display: block;
+      overflow: visible;
+      padding: 25px 21px;
+      position: relative;
+
+      &::after {
+        top: 0;
+        left: 12px;
+        right: 12px;
+        height: 2px;
+        content: '';
+        position: absolute;
+        background-color: $light-gray;
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+        content: '';
+        bottom: -2px;
+        position: absolute;
+        transition: opacity 0.2s;
+        background-color: $light-gray;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    .dropdown-list-item:last-of-type {
+      .dropdown-link::before {
+        bottom: 0;
+      }
+    }
+  }
 
   .icon {
     fill: $charcoal;
   }
 
-  .icon-american-flag {
+  .icon-american-flag, .icon-korean-flag, .icon-chinese-flag {
     width: 30px;
     height: 22px;
   }

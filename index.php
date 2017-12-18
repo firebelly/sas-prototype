@@ -106,10 +106,28 @@
             <div class="sr-only">Search</div>
             <svg class="icon icon-search" aria-hidden="true" role="image"><use xlink:href="#icon-search"/></svg>
           </a></li>
-          <li class="nav-list-item language"><a href="#" class="nav-link">
-            <div class="sr-only">Language</div>
-            <svg class="icon icon-american-flag" aria-hidden="true" role="image"><use xlink:href="#icon-american-flag"/></svg>
-          </a></li>
+          <li class="nav-list-item language">
+            <a href="#" class="nav-link toggle-language-dropdown">
+              <div class="sr-only">Language: English</div>
+              <svg class="icon icon-american-flag" aria-hidden="true" role="image"><use xlink:href="#icon-american-flag"/></svg>
+            </a>
+            <div class="language-dropdown -dropdown-closed">
+              <ul class="dropdown-list semantic-only-list">
+                <li class="dropdown-list-item">
+                  <a href="#" class="dropdown-link">
+                    <div class="sr-only">Chinese</div>
+                    <svg class="icon icon-chinese-flag" aria-hidden="true" role="image"><use xlink:href="#icon-chinese-flag"/></svg>
+                  </a>
+                </li>
+                <li class="dropdown-list-item">
+                  <a href="#" class="dropdown-link">
+                    <div class="sr-only">Korean</div>
+                    <svg class="icon icon-korean-flag" aria-hidden="true" role="image"><use xlink:href="#icon-korean-flag"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="nav-list-item sas-lockup"><a href="#" class="nav-link">
             <div class="sr-only">Shanghai American School</div>
             <svg class="icon icon-sas-lockup" aria-hidden="true" role="image"><use xlink:href="#icon-sas-lockup"/></svg>
@@ -126,10 +144,28 @@
             <div class="sr-only">Search</div>
             <svg class="icon icon-search" aria-hidden="true" role="image"><use xlink:href="#icon-search"/></svg>
           </a></li>
-          <li class="nav-list-item language"><a href="#" class="nav-link">
-            <div class="sr-only">Language</div>
-            <svg class="icon icon-american-flag" aria-hidden="true" role="image"><use xlink:href="#icon-american-flag"/></svg>
-          </a></li>
+          <li class="nav-list-item language">
+            <a href="#" class="nav-link toggle-language-dropdown">
+              <div class="sr-only">Language: English</div>
+              <svg class="icon icon-american-flag" aria-hidden="true" role="image"><use xlink:href="#icon-american-flag"/></svg>
+            </a>
+            <div class="language-dropdown -dropdown-closed">
+              <ul class="dropdown-list semantic-only-list">
+                <li class="dropdown-list-item">
+                  <a href="#" class="dropdown-link">
+                    <div class="sr-only">Chinese</div>
+                    <svg class="icon icon-chinese-flag" aria-hidden="true" role="image"><use xlink:href="#icon-chinese-flag"/></svg>
+                  </a>
+                </li>
+                <li class="dropdown-list-item">
+                  <a href="#" class="dropdown-link">
+                    <div class="sr-only">Korean</div>
+                    <svg class="icon icon-korean-flag" aria-hidden="true" role="image"><use xlink:href="#icon-korean-flag"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
