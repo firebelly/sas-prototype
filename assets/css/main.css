@@ -1030,7 +1030,6 @@ ul.semantic-only-list {
   z-index: 0;
   line-height: 0;
   display: block;
-  overflow: visible;
   padding: 25px 21px;
   position: relative;
 }
