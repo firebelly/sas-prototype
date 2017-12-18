@@ -6,7 +6,7 @@
   padding: 0;
   width: 100%;
   position: fixed;
-  min-width: 1200px;
+  min-width: 1250px;
 
   .nav-list {
     margin: 0;
@@ -52,30 +52,30 @@
         position: relative;
         padding: 9px 20px;
         border-left: 2px solid $light-gray;
-        // &:hover {
-        //   color: $blue;
+        &:hover {
+          // color: $blue;
 
-        //   &::before {
-        //     left: -2px;
-        //     right: -2px;
-        //     top: -20px;
-        //     content: '';
-        //     height: 10px;
-        //     background: $white;
-        //     position: absolute;
-        //     border-bottom: 1px solid $light-gray;
-        //   }
+          &::before {
+            left: -2px;
+            right: -2px;
+            top: -21px;
+            content: '';
+            height: 10px;
+            background: $white;
+            position: absolute;
+            border-bottom: 1px solid $light-gray;
+          }
 
-        //   &::after {
-        //     top: 100%;
-        //     content: '';
-        //     left: -2px;
-        //     right: -2px;
-        //     height: 10px;
-        //     background: $blue;
-        //     position: absolute;
-        //   }
-        // }
+          // &::after {
+          //   top: 100%;
+          //   content: '';
+          //   left: -2px;
+          //   right: -2px;
+          //   height: 10px;
+          //   background: $blue;
+          //   position: absolute;
+          // }
+        }
       }
     }
 
@@ -335,7 +335,7 @@
 
     &:not(.-temporarily-disable-dropdowns):hover{
       color: $blue;
-      
+
       .dropdown {
         opacity: 1;
         z-index: 1;
