@@ -40,50 +40,63 @@
         <ul class="nav-list dropdowns semantic-only-list">
           <li class="nav-list-item has-dropdown dropdown-closed">
             <a href="#" class="nav-link">Our Story</a>
-            <div class="dropdown has-5-items">
+            <div class="dropdown has-7-items">
               <ul class="dropdown-list semantic-only-list">
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Lorem</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Ipsum</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Dolor Sit</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Tincidut</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Donec</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Overview</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Mission + Values</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">History</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Our Campuses</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Leadership</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Faculty</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Board of Trustees</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-list-item has-dropdown dropdown-closed">
             <a href="#" class="nav-link">Academics</a>
-            <div class="dropdown has-5-items">
+            <div class="dropdown has-10-items">
               <ul class="dropdown-list semantic-only-list">
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Lorem</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Ipsum</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Dolor Sit</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Amet Cras</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Tincidut</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Overview</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Pre-Kindergarten</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Elementary School</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Middle School</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">High School</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Signature Programs</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">EAL Programs</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Counseling</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Libraries</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Technology</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-list-item has-dropdown dropdown-open">
             <a href="#" class="nav-link">Life at SAS</a>
-            <div class="dropdown has-7-items">
+            <div class="dropdown has-10-items">
               <ul class="dropdown-list semantic-only-list">
                 <li class="dropdown-list-item"><a href="#" class="dropdown-link">Overview</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Meet A Family</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Plan A Visit</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Qualifications</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Tuition + Fees</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">FAQs</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Apply</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Athletics</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Arts</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Activities</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">PTSA</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Publications</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Food</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Transportation</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Health + Safety</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Giving</a></li>
               </ul>
             </div>
           </li>
           <li class="nav-list-item has-dropdown dropdown-closed">
             <a href="#" class="nav-link">Admissions</a>
-            <div class="dropdown has-4-items">
+            <div class="dropdown has-7-items">
               <ul class="dropdown-list semantic-only-list">
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Lorem</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Ipsum</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Dolor Sit</a></li>
-                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Amet Cras</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Overview</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Meet a Family</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Plan a Visit</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Academic Criteria</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Tuition + Fees</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">FAQs</a></li>
+                <li class="dropdown-list-item"><a href="#" class="dropdown-link">Apply</a></li>
               </ul>
             </div>
           </li>

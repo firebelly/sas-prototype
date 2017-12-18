@@ -51,22 +51,22 @@
         position: relative;
         border-left: 2px solid $light-gray;
 
-        &::before {
-          height: 0;
-          left: -2px;
-          right: -2px;
-          content: '';
-          background: $white;
-          position: absolute;
-          transition: height 0.1s;
-          bottom: calc(100% + 12px);
-        }
+        // &::before {
+        //   height: 0;
+        //   left: -2px;
+        //   right: -2px;
+        //   content: '';
+        //   background: $white;
+        //   position: absolute;
+        //   transition: height 0.1s;
+        //   bottom: calc(100% + 12px);
+        // }
 
-        &:hover {
+        // &:hover {
 
-          &::before {
-            height: 12px;
-          }
+        //   &::before {
+        //     height: 12px;
+        //   }
 
           // &::after {
           //   top: 100%;
@@ -77,7 +77,7 @@
           //   background: $blue;
           //   position: absolute;
           // }
-        }
+        // }
       }
     }
 
@@ -335,8 +335,24 @@
   .nav-list-item.has-dropdown {
     position: relative;
 
+
+    &::before {
+      height: 0;
+      left: -2px;
+      right: -2px;
+      content: '';
+      bottom: 100%;
+      background: $white;
+      position: absolute;
+      transition: height 0.1s;
+    }
+
     &:not(.-temporarily-disable-dropdowns):hover{
       color: $blue;
+
+      &::before {
+        height: 12px;
+      }
 
       .dropdown {
         opacity: 1;
